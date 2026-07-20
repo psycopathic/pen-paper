@@ -1,5 +1,5 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
+  "include": ["src", "jest.config.js"],
   "compilerOptions": {
     // File Layout
     "rootDir": "./src",
@@ -9,7 +9,7 @@
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
     "target": "esnext",
-    "types": [],
+    "types": ["node", "jest"],
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
