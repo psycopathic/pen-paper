@@ -2,6 +2,8 @@ import cors from "cors";
 
 const allowedOrigins = [
   process.env.CLIENT_URL,
+  "http://localhost:3000",
+  "http://localhost:3001",
 ];
 
 export const corsOptions: cors.CorsOptions = {
