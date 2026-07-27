@@ -1,4 +1,4 @@
-import { Prisma } from "../../generated/prisma/client";
+import { Prisma } from "@prisma/client";
 export declare const findUserById: (id: string) => Promise<{
     createdAt: Date;
     email: string;
@@ -6,7 +6,7 @@ export declare const findUserById: (id: string) => Promise<{
     id: string;
     lastName: string | null;
     role: string;
-    socialLinks: import("@prisma/client/runtime/client").JsonValue;
+    socialLinks: Prisma.JsonValue;
     updatedAt: Date;
     username: string;
 } | null>;
@@ -21,7 +21,7 @@ export declare const findUsers: (params: {
         id: string;
         lastName: string | null;
         role: string;
-        socialLinks: import("@prisma/client/runtime/client").JsonValue;
+        socialLinks: Prisma.JsonValue;
         updatedAt: Date;
         username: string;
     }[];
@@ -34,7 +34,7 @@ export declare const updateUser: (id: string, data: Prisma.UserUpdateInput) => P
     id: string;
     lastName: string | null;
     role: string;
-    socialLinks: import("@prisma/client/runtime/client").JsonValue;
+    socialLinks: Prisma.JsonValue;
     updatedAt: Date;
     username: string;
 }>;
@@ -46,7 +46,7 @@ export declare const deleteUserWithBlogs: (id: string) => Promise<{
     role: string;
     firstName: string | null;
     lastName: string | null;
-    socialLinks: import("@prisma/client/runtime/client").JsonValue | null;
+    socialLinks: Prisma.JsonValue | null;
     createdAt: Date;
     updatedAt: Date;
 }>;

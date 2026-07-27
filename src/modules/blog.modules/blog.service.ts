@@ -1,5 +1,5 @@
 import { prisma } from "../../lib/db";
-import { Prisma } from "../../generated/prisma/client";
+import { Prisma } from "@prisma/client";
 
 export const createBlog = async (data: {
   title: string;

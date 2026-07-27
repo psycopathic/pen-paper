@@ -1,5 +1,5 @@
 import { prisma } from "../../lib/db";
-import { Prisma } from "../../generated/prisma/client";
+import { Prisma } from "@prisma/client";
 
 export const findUserById = async (id: string) => {
   return prisma.user.findUnique({
