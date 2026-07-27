@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.findUserRole = exports.deleteRefreshToken = exports.findRefreshToken = exports.saveRefreshToken = exports.deleteUser = exports.updateUser = exports.createUser = exports.findUserById = exports.findUserByUsername = exports.findUserByEmail = void 0;
 const db_1 = require("../../lib/db");
-const client_1 = require("../../generated/prisma/client");
+const client_1 = require("@prisma/client");
 const findUserByEmail = async (email) => {
     return db_1.prisma.user.findUnique({
         where: { email },

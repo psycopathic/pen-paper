@@ -10,6 +10,7 @@ const zod_1 = require("zod");
 const sentry_1 = require("./sentry");
 const cors_2 = require("./cors");
 const rateLimiter_1 = require("./rateLimiter");
+const logger_1 = __importDefault(require("./logger"));
 const auth_routes_1 = __importDefault(require("../modules/auth.modules/auth.routes"));
 const blog_routes_1 = __importDefault(require("../modules/blog.modules/blog.routes"));
 const comment_routes_1 = __importDefault(require("../modules/comment.modules/comment.routes"));
@@ -57,6 +58,7 @@ app.use((err, _req, res, _next) => {
         });
         return;
     }
+    logger_1.default.error(err);
     res.status(500).json({
         error: "Internal Server Error",
         eventId: res.sentry,

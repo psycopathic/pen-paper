@@ -1,4 +1,4 @@
-import { Prisma } from "../../generated/prisma/client";
+import { Prisma } from "@prisma/client";
 export declare const createBlog: (data: {
     title: string;
     slug: string;
@@ -18,7 +18,7 @@ export declare const createBlog: (data: {
     title: string;
     slug: string;
     content: string;
-    banner: import("@prisma/client/runtime/client").JsonValue;
+    banner: Prisma.JsonValue;
     authorId: string;
     viewsCount: number;
     likesCount: number;
@@ -39,7 +39,7 @@ export declare const findBlogById: (id: string) => Promise<({
     title: string;
     slug: string;
     content: string;
-    banner: import("@prisma/client/runtime/client").JsonValue;
+    banner: Prisma.JsonValue;
     authorId: string;
     viewsCount: number;
     likesCount: number;
@@ -60,7 +60,7 @@ export declare const findBlogBySlug: (slug: string) => Promise<({
     title: string;
     slug: string;
     content: string;
-    banner: import("@prisma/client/runtime/client").JsonValue;
+    banner: Prisma.JsonValue;
     authorId: string;
     viewsCount: number;
     likesCount: number;
@@ -85,7 +85,7 @@ export declare const findBlogs: (params: {
         title: string;
         slug: string;
         content: string;
-        banner: import("@prisma/client/runtime/client").JsonValue;
+        banner: Prisma.JsonValue;
         authorId: string;
         viewsCount: number;
         likesCount: number;
@@ -108,7 +108,7 @@ export declare const updateBlog: (id: string, data: Prisma.BlogUpdateInput) => P
     title: string;
     slug: string;
     content: string;
-    banner: import("@prisma/client/runtime/client").JsonValue;
+    banner: Prisma.JsonValue;
     authorId: string;
     viewsCount: number;
     likesCount: number;
@@ -122,7 +122,7 @@ export declare const deleteBlog: (id: string) => Promise<{
     title: string;
     slug: string;
     content: string;
-    banner: import("@prisma/client/runtime/client").JsonValue;
+    banner: Prisma.JsonValue;
     authorId: string;
     viewsCount: number;
     likesCount: number;
@@ -136,7 +136,7 @@ export declare const incrementBlogViews: (id: string) => Promise<{
     title: string;
     slug: string;
     content: string;
-    banner: import("@prisma/client/runtime/client").JsonValue;
+    banner: Prisma.JsonValue;
     authorId: string;
     viewsCount: number;
     likesCount: number;

@@ -1,5 +1,6 @@
 {
   "include": ["src", "jest.config.js"],
+  "exclude": ["src/generated", "dist"],
   "compilerOptions": {
     // File Layout
     "rootDir": "./src",

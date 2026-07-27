@@ -3,6 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.corsOptions = void 0;
 const allowedOrigins = [
     process.env.CLIENT_URL,
+    "http://localhost:3000",
+    "http://localhost:3001",
 ];
 exports.corsOptions = {
     origin: (origin, callback) => {
