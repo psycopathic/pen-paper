@@ -6,6 +6,8 @@ const allowedOrigins = [
   "http://localhost:3001",
 ];
 
+// this is cors preflight check as we are telling about methods and headers that are allowed to be used in the request
+
 export const corsOptions: cors.CorsOptions = {
   origin: (origin, callback) => {
     if (!origin) {
